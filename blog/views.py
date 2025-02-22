@@ -49,7 +49,7 @@ ChatterBotCorpusTrainer(bot).train('chatterbot.corpus.english')
 
 @csrf_exempt  # Temporarily exempt from CSRF for testing purposes (not recommended for production)
 def getResponse(request):
-        
+    print('Received request')
     if request.method == 'POST':
         try:
             data=json.loads(request.body)
